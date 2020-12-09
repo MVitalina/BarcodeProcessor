@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BarcodeProcessor/bin
+/BarcodeProcessor/obj
+/BarcodeProcessor/.vs/BarcodeProcessor/v16
