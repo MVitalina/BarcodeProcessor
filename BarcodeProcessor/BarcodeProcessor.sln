@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeProcessor", "BarcodeProcessor.csproj", "{3ED05339-DC8D-4CF5-B484-33133A0246B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeProcessor", "BarcodeProcessor.csproj", "{2A519CC6-E3FB-43BD-A3D5-CC6ACB812E29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3ED05339-DC8D-4CF5-B484-33133A0246B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ED05339-DC8D-4CF5-B484-33133A0246B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ED05339-DC8D-4CF5-B484-33133A0246B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ED05339-DC8D-4CF5-B484-33133A0246B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A519CC6-E3FB-43BD-A3D5-CC6ACB812E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A519CC6-E3FB-43BD-A3D5-CC6ACB812E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A519CC6-E3FB-43BD-A3D5-CC6ACB812E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A519CC6-E3FB-43BD-A3D5-CC6ACB812E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AC657FAA-1EA7-4305-8477-117E5DDD22E5}
+		SolutionGuid = {11960E7C-39D6-4C6C-AF33-EE4CE6DC5F22}
 	EndGlobalSection
 EndGlobal
