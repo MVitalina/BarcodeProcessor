@@ -62,21 +62,58 @@ namespace BarcodeProcessor
         {
             if (encoded)
             {
-                SaveFileDialog sfd = new SaveFileDialog
+                using (SaveFileDialog sfd = new SaveFileDialog())
                 {
-                    Filter = "PNG (*.png)|*.png",
-                    AddExtension = true
-                };
+                    sfd.Filter = "PNG (*.png)|*.png";
+                    sfd.AddExtension = true;
 
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    b.SaveImage(sfd.FileName, SaveTypes.PNG);
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        b.SaveImage(sfd.FileName, SaveTypes.PNG);
+                        labelInfo.ForeColor = Color.DarkGreen;
+                        labelInfo.Text = "Saved";
+                    }
+                    else
+                    {
+                        labelInfo.ForeColor = Color.DarkRed;
+                        labelInfo.Text = "Wasn't saved";
+                    }
                 }
             }
             else
             {
-                Console.WriteLine("Encode first");
+                labelInfo.ForeColor = Color.DarkRed;
+                labelInfo.Text = "Encode first";
             }
+        }
+
+        private void bDecode_Click(object sender, EventArgs e)
+        {
+            string filePath = "";
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.InitialDirectory = "c:\\";
+                ofd.Filter = "PNG files (*.png)|*.png";
+                ofd.FilterIndex = 2;
+                ofd.RestoreDirectory = true;
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = ofd.FileName;
+                }
+                else
+                {
+                    labelDecoded.ForeColor = Color.DarkRed;
+                    labelDecoded.Text = "File wasn`t opened";
+                    return;
+                }
+            }
+
+            Image barcode = Image.FromFile(filePath);
+            Image resized = new Bitmap(barcode, new Size(barcode.Width * 2, barcode.Height * 2));
+            pictureBoxDecoding.Image = resized;
+
+            //TODO decoding
         }
     }
 }
